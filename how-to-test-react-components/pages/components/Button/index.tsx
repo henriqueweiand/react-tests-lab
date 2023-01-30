@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 
 // import styles from './index.module.css'
 
-const Button: React.FC = () => {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
+const Button: React.FC<ButtonProps> = ({ children = 'OK', ...rest }) => {
     return (
-        <div>
-            <button>Search</button>
-        </div>
+        <button {...rest}>{children}</button>
     );
 }
 
