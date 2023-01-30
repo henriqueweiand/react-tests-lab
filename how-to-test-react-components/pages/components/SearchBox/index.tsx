@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import Button from '../Button';
 
 import styles from './index.module.css';
 
 interface SearchBoxProps {
-    requestSearch: (query: any) => void
+    requestSearch: (query: string) => void
 }
 
 const SearchBox: React.FC<SearchBoxProps> = ({ requestSearch }) => {
-    const [query, setQuery] = useState("");
+    const [query, setQuery] = useState<string>("");
 
     const searchClick = () => {
         if (query) {
@@ -16,7 +16,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ requestSearch }) => {
         }
     }
 
-    const updateQuery = (e: any) => {
+    const updateQuery = (e: ChangeEvent<HTMLInputElement>) => {
         setQuery(e.target.value);
     }
 
