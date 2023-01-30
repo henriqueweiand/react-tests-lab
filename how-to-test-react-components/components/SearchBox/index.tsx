@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent } from 'react';
-import Button from '../Button';
+import Button from '@/components/Button';
 
 import styles from './index.module.css';
 
