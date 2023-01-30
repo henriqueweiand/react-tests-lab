@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import styles from '@/pages/index.module.css'
+import SearchBox from './components/SearchBox'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
-        test
+        <SearchBox requestSearch={console.log} />
       </main>
     </div>
   )
