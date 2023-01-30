@@ -2,12 +2,13 @@ import { render, screen } from '@testing-library/react'
 
 import SearchBox from '@/components/SearchBox';
 
-describe('Home', () => {
+describe('SearchBox', () => {
   it('Should render the SearchBox', () => {
     const requestSearch = jest.fn();
 
-    render(<SearchBox requestSearch={requestSearch} />)
+    const { getByTestId, queryByPlaceholderText } = render(<SearchBox requestSearch={requestSearch} />)
 
-    // expect(heading).toBeInTheDocument()
+    expect(queryByPlaceholderText('Search')).toBeTruthy();
+    expect(getByTestId('search-button')).toBeTruthy();
   })
 })

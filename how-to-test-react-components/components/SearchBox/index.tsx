@@ -23,7 +23,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ requestSearch }) => {
     return (
         <div className={styles.container}>
             <input placeholder='Search' onChange={updateQuery} type="text" name="search" value={query} />
-            <Button onClick={searchClick} />
+            <Button data-testid="search-button" onClick={searchClick} />
         </div>
     );
 }
