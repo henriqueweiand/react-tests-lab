@@ -2,13 +2,19 @@ import { render, screen } from '@testing-library/react'
 import Home from '@/pages/index'
 
 describe('Home', () => {
-  it('renders a heading', () => {
-    // render(<Home />)
+  it('renders the structure', () => {
+    const { getByRole } = render(<Home />)
 
-    // const heading = screen.getByRole('heading', {
-    //   name: /welcome to next\.js!/i,
-    // })
+    const main = getByRole('main');
 
-    expect(true).toBeTruthy()
+    expect(main).toBeInTheDocument()
+  })
+
+  it('Should render the main component inside the page', () => {
+    const { getByRole } = render(<Home />)
+
+    const component = getByRole('search-box');
+
+    expect(component).toBeInTheDocument()
   })
 })

@@ -11,8 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <SearchBox requestSearch={console.log} />
+      <main role="main">
+        <SearchBox role="search-box" requestSearch={console.log} />
       </main>
     </div>
   )
