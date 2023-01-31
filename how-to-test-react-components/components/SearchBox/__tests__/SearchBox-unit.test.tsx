@@ -21,12 +21,19 @@ describe('SearchBox', () => {
     expect(searchInput.value).toBe("test")
   })
 
-  it('Should update the input value', () => {
-    const { queryByPlaceholderText } = render(<SearchBox requestSearch={requestSearch} />)
+  it('Shouldnt trigger the search', () => {
+    const { getByTestId } = render(<SearchBox requestSearch={requestSearch} />)
+
+    fireEvent.click(getByTestId('search-button'));
+    expect(requestSearch).not.toHaveBeenCalled()
+  })
+
+  it('Should trigger the search', () => {
+    const { getByTestId, queryByPlaceholderText } = render(<SearchBox requestSearch={requestSearch} />)
     const searchInput = queryByPlaceholderText('Search');
 
     fireEvent.change(searchInput, { target: { value: "test" } })
-
-    expect(searchInput.value).toBe("test")
+    fireEvent.click(getByTestId('search-button'));
+    expect(requestSearch).toHaveBeenCalled()
   })
 })
