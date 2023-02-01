@@ -43,10 +43,10 @@ describe('useCounter', () => {
       global.fetch = jest.fn(() => promise);
       const { result, waitForNextUpdate } = renderHook(usePokemon)
 
-      deferred.resolve({ json: () => { pokemon: "pikachu" } })
+      deferred.resolve({ json: () => ({ name: "pikachu" }) })
       await waitForNextUpdate()
 
-      expect(result.current.pokemon).toStrictEqual({ pokemon: "pikachu" })
+      expect(result.current.pokemon).toStrictEqual({ name: "pikachu" })
     });
   })
 
@@ -60,7 +60,7 @@ describe('useCounter', () => {
       const { result, waitForNextUpdate } = renderHook(usePokemon)
       await waitForNextUpdate()
 
-      expect(result.current.pokemon).toStrictEqual({ error: "Fetch error" })
+      expect(result.current.error).toStrictEqual("Fetch error")
     });
   })
 })
