@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import styles from '@/pages/index.module.css'
-import Counter from '@/components/Counter'
+import Main from '@/components/Main'
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main role="main">
-        <Counter />
+        <Main />
       </main>
     </div>
   )

@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react-hooks'
 
-import useCounter from '../../hooks/useCounter';
+import useCounter from '../usePokemon';
 
 describe('useCounter', () => {
   it('Should increment the counter', () => {
