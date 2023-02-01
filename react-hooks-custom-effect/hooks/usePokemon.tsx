@@ -7,7 +7,7 @@ interface PokemonAPIResponseInterface {
     name: string
 }
 
-export default function usePokemon(pokemonName: string) {
+export default function usePokemon(pokemonName?: string) {
     const [pokemon, setPokemon] = useState<PokemonAPIResponseInterface>();
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [error, setError] = useState(null);

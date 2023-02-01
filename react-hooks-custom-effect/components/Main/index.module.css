@@ -7,4 +7,5 @@
 .container > h1 {
     text-align: center;
     color: #fff;
+    margin: 0;
 }
