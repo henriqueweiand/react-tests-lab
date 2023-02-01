@@ -18,7 +18,7 @@ export default function usePokemon(pokemonName?: string) {
                 setIsLoading(true);
                 const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
                 const json = await response.json()
-                // console.log('############', json)
+
                 setPokemon(json);
             } catch (e) {
                 setError(e as any);
