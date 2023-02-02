@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest --watch",
+    "test:ci": "jest --ci",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.7",
+    "eslint": "^8.33.0",
+    "eslint-config-next": "^13.1.6",
+    "next": "latest",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "react-hook-form": "^7.43.0",
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "13.2.0",
+    "@testing-library/user-event": "14.2.0",
+    "@types/react": "18.0.9",
+    "@types/testing-library__jest-dom": "5.14.5",
+    "jest": "28.1.0",
+    "jest-environment-jsdom": "28.1.0",
+    "typescript": "4.6.4"
+  }
+}
