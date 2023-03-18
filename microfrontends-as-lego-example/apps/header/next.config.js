@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
-const withTM = require("next-transpile-modules")(["ui"]);
 
-module.exports = withTM({
+module.exports = {
+  transpilePackages: ['ui'],
   reactStrictMode: true,
   swcMinify: true,
   webpack(config, options) {
@@ -26,4 +26,4 @@ module.exports = withTM({
 
     return config;
   },
-});
+};
