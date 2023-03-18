@@ -1,5 +1,5 @@
 {
-  "name": "consumer",
+  "name": "app1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -20,7 +20,12 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.9.5",
-    "ui": "*"
+    "ui": "*",
+    "@chakra-ui/react": "^1",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^6",
+    "theme": "*"
   },
   "devDependencies": {
     "html-webpack-plugin": "^5.5.0",

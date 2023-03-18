@@ -3,7 +3,7 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
 
 module.exports = {
-  transpilePackages: ['ui'],
+  transpilePackages: ['ui', 'theme'],
   reactStrictMode: true,
   swcMinify: true,
   webpack(config, options) {
@@ -13,12 +13,12 @@ module.exports = {
       //config.cache=false
       config.plugins.push(
         new NextFederationPlugin({
-          name: "header",
-
-          filename: "static/chunks/remoteEntry.js",
-          exposes: {
-            "./component/Header": "./src/components/Header.tsx",
+          name: "app1",
+          remotes: {
+            components: `components@http://localhost:3000/_next/static/chunks/remoteEntry.js`,
           },
+          filename: "static/chunks/remoteEntry.js",
+
           shared: {},
         })
       );

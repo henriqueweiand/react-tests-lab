@@ -1,18 +1,19 @@
 import dynamic from "next/dynamic";
 
 const Header = dynamic(
-  () => import("header/component/Header").then((m) => m.Header),
+  () => import("components/Header").then((m) => m.Header),
   {
     ssr: false,
+    loading: () => <p>Loading...</p>,
   }
 );
 
 export default function Home() {
   return (
     <>
-      <h1>Micro-frontends Next JS </h1>
-
       <Header />
-    </>
+
+      <h1>App1 </h1>
+    </ >
   );
 }
