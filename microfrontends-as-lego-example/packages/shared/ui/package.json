@@ -1,15 +1,14 @@
 {
     "name": "ui",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "index.tsx",
     "license": "MIT",
     "scripts": {
         "lint": "eslint .",
-        "format": "eslint --fix --ext .js,.jsx ."
+        "format": "eslint --fix --ext .js,.jsx,.tsx,.ts ."
     },
     "devDependencies": {
         "eslint": "^7.32.0",
-        "eslint-config-custom": "*",
         "react": "^18.2.0"
     }
 }
