@@ -13,7 +13,7 @@ module.exports = {
       //config.cache=false
       config.plugins.push(
         new NextFederationPlugin({
-          name: "app1",
+          name: "app2",
           remotes: {
             chat: `chat@http://localhost:3000/_next/static/chunks/remoteEntry.js`,
           },

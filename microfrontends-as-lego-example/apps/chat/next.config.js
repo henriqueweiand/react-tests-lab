@@ -3,7 +3,7 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
 
 module.exports = {
-  transpilePackages: ['ui', 'theme'],
+  transpilePackages: ['theme'],
   reactStrictMode: true,
   swcMinify: true,
   webpack(config, options) {
@@ -13,11 +13,11 @@ module.exports = {
       //config.cache=false
       config.plugins.push(
         new NextFederationPlugin({
-          name: "components",
+          name: "chat",
 
           filename: "static/chunks/remoteEntry.js",
           exposes: {
-            "./Header": "./src/components/Header/index.tsx",
+            "./App": "./src/index.tsx",
           },
           shared: {},
         })
